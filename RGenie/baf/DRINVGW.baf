@@ -1,0 +1,63 @@
+IF 
+OnCreation()
+Global("DRGTRADAMAR","GLOBAL",1)
+THEN
+RESPONSE #100
+ReallyForceSpellRES("DRSPRGG2",Myself)
+SetName(@27)
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("DRGTRADAMAR","GLOBAL",3)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF 
+OnCreation()
+Global("DRGTRADTRADE","GLOBAL",1)
+THEN
+RESPONSE #100
+ReallyForceSpellRES("DRSPRGG3",Myself)
+SetName(@28)
+StartDialogueNoSet(Player1)
+END
+
+
+IF
+Global("DRGTRADTRADE","GLOBAL",3)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF 
+OnCreation()
+Global("DRGTRADCOPP","GLOBAL",1)
+THEN
+RESPONSE #100
+ReallyForceSpellRES("DRSPRGG4",Myself)
+SetName(@29)
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("DRGTRADCOPP","GLOBAL",3)
+
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF 
+OnCreation()
+OR(3)
+Global("DRGTRAVAMAR","GLOBAL",1)
+Global("DRGTRAVTRADE","GLOBAL",1)
+Global("DRGTRAVCOPP","GLOBAL",1)
+THEN
+RESPONSE #100
+ReallyForceSpellRES("DRSPRGGW",Myself)
+END

@@ -1,0 +1,45 @@
+IF
+ActuallyInCombat()
+THEN
+RESPONSE #100
+DisplayStringHead(Player1,@19)
+DestroySelf()
+END
+
+IF
+OR(4)
+!Global("DRGTALKONCE","GLOBAL",0)
+!Global("DRGTRADAMAR","GLOBAL",0)
+!Global("DRGTRAVTRADE","GLOBAL",0)
+!Global("DRGTRAVCOPP","GLOBAL",0)
+THEN
+RESPONSE #100
+DisplayStringHead(Player1,@20)
+DestroySelf()
+END
+
+IF
+OR(8)
+Global("Chapter","GLOBAL",%bg2_chapter_5%)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_6%)
+AreaCheck("AR0516")
+AreaCheck("AR0517")
+AreaCheck("AR0518")
+AreaCheck("AR0519")
+AreaCheck("AR0520")
+AreaCheck("AR0521")
+THEN
+RESPONSE #100
+DisplayStringHead(Player1,@21)
+DestroySelf()
+END
+
+IF
+CombatCounter(0)
+See(Player1)
+Global("DRGTALKONCE","GLOBAL",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+

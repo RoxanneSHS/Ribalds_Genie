@@ -1,0 +1,9 @@
+@0    = ~Est-ce que tu vends d'autres objets que ce qui est proposé en vitrine ?~
+@1    = ~Il est vrai, en effet, que je propose un service particulier à mes clients les plus réguliers. Si tu reviens au Marché de l'Aventurier plus souvent, il se pourrait bien que je te le propose.~
+@2    = ~Hmm, tu es, il est vrai, un client régulier, et tu sembles être de ceux qui pourraient apprécier d'avoir toujours une bonne échoppe à disposition où qu'ils se trouvent dans les Royaumes. Aimerais-tu louer les services de mon Génie ? Pour 500 pièces d'or seulement, il te téléportera jusqu'au Marché de l'Aventurier et te fera revenir à ton point de départ autant de fois que tu le voudras.~ ~Hmm, tu es, il est vrai, une cliente régulière, et tu sembles être de ceux qui pourraient apprécier d'avoir toujours une bonne échoppe à disposition où qu'ils se trouvent dans les Royaumes. Aimerais-tu louer les services de mon Génie ? Pour 500 pièces d'or seulement, il te téléportera jusqu'au Marché de l'Aventurier et te fera revenir à ton point de départ autant de fois que tu le voudras.~
+@3    = ~Ça marche.~
+@4    = ~Pardon, mais je suis un peu à court, en ce moment...~
+@5    = ~Non merci.~
+@6    = ~Excellent. Il suffit de jouer de cette flûte pour que mon Génie apparaisse sous tes yeux et te téléporte. Par contre, il te faut savoir que tu ne pourras le convoquer durant un combat. Je ne peux pas risquer qu'il se fasse tuer, il représente une telle manne financière ! Je te souhaite de bonnes aventures, et surtout de revenir avec beaucoup d'argent.~
+@7    = ~Comme tu voudras.~
+@8    = ~Alors reviens dès que tu auras assez d'argent.~

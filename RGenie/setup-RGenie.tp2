@@ -1,0 +1,78 @@
+BACKUP ~RGenie/backup~
+AUTHOR ~dragon@blackwyrmlair.net~
+VERSION ~3.0~
+
+ALWAYS
+  ACTION_IF (GAME_IS ~eet~) BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+        
+        ACTION_DEFINE_ARRAY dr_reload BEGIN
+	~setup RGenie.tra~
+	END
+	ACTION_DEFINE_ARRAY dr_noconvert BEGIN END
+	LAF HANDLE_CHARSETS
+		INT_VAR
+		infer_charset = 1
+		STR_VAR
+		tra_path = EVAL ~%MOD_FOLDER%/tra~
+		noconvert_array = dr_noconvert
+		reload_array = dr_reload
+	END
+END
+
+AUTO_TRA ~RGenie/tra/%s~
+
+LANGUAGE ~English~ ~english~ ~RGenie/tra/english/setup RGenie.tra~
+LANGUAGE ~Espanol~ ~spanish~ ~RGenie/tra/spanish/setup RGenie.tra~
+LANGUAGE ~Russian~ ~russian~ ~RGenie/tra/russian/setup RGenie.tra~
+LANGUAGE ~Czech~   ~czech~   ~RGenie/tra/czech/setup RGenie.tra~
+LANGUAGE ~Polish~  ~polish~  ~RGenie/tra/polish/setup RGenie.tra~
+LANGUAGE ~Italian~ ~italian~ ~RGenie/tra/italian/setup RGenie.tra~
+LANGUAGE ~German~  ~german~  ~RGenie/tra/german/setup RGenie.tra~
+LANGUAGE ~French~  ~french~  ~RGenie/tra/french/setup RGenie.tra~
+
+BEGIN @0
+
+COMPILE ~RGenie/D/DRRIBALD.D~
+~RGenie/D/DRGENIE.D~
+COMPILE EVALUATE_BUFFER~RGenie/D/DRINVGW.D~
+
+COMPILE EVALUATE_BUFFER ~RGenie/baf/DRGENIE.baf~
+COMPILE ~RGenie/baf/DRINVGW.baf~
+
+
+COPY ~RGenie/cre/DRGENIE.cre~ ~override/DRGENIE.cre~
+SAY NAME1 @0
+SAY NAME2 @0
+
+
+COPY ~RGenie/eff/drsumgen.eff~ ~override~
+~RGenie/cre/M0592L.bmp~ ~override~
+~RGenie/cre/M0592S.bmp~ ~override~
+~RGenie/itm/DRRGIV.bam~ ~override~
+~RGenie/itm/DRRGID.bam~ ~override~
+~RGenie/vcc/DRRGPOR.bam~ ~override~
+~RGenie/vcc/drgportv.vvc~ ~override~
+~RGenie/spl/drsprggw.spl~ ~override~
+~RGenie/spl/drsprgg2.spl~ ~override~
+~RGenie/spl/drsprgg3.spl~ ~override~
+~RGenie/spl/drsprgg4.spl~ ~override~
+~RGenie/sto/BERNPOTR.sto~ ~override~
+
+
+COPY~RGenie/cre/DRINVGW.cre~ ~override/DRINVGW.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+
+
+COPY ~RGenie/itm/drrgitm.itm~ ~override/drrgitm.itm~
+SAY NAME2 @2
+SAY DESC @3
